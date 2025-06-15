@@ -1,0 +1,58 @@
+---
+const expertise = [
+  {
+    image: "https://img.webniaga.my/Idolbrandz/idolbrandzexpt1.jpg",
+    alt: "Pengiklanan Instagram"
+  },
+  {
+    image: "https://img.webniaga.my/Idolbrandz/idolbrandzexpt2.jpg",
+    alt: "Pengiklanan Facebook"
+  },
+  {
+    image: "https://img.webniaga.my/Idolbrandz/idolbrandzexpt3.jpg",
+    alt: "Pengiklanan TikTok"
+  },
+  {
+    image: "https://img.webniaga.my/Idolbrandz/idolbrandzexpt5.jpg",
+    alt: "Pengiklanan Google"
+  },
+  {
+    image: "https://img.webniaga.my/Idolbrandz/idolbrandzexpt4.jpg",
+    alt: "Pengurusan Social Media"
+  },
+  {
+    image: "https://img.webniaga.my/Idolbrandz/idolbrandzexpt6.jpg",
+    alt: "Social Media Creative"
+  }
+];
+---
+
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-inter font-bold text-gray-900">Kepakaran Kami</h2>
+      <div class="w-20 h-1 bg-primary-600 mx-auto mt-4 mb-6"></div>
+      <p class="max-w-2xl mx-auto text-gray-600">
+        Kami memiliki kepakaran dalam pelbagai aspek pengiklanan digital untuk membantu perniagaan anda mencapai kejayaan.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {expertise.map((item, index) => (
+        <div 
+          class="group relative overflow-hidden rounded-lg shadow-lg animate-on-scroll fade-in" 
+          style={`animation-delay: ${index * 0.1}s`}
+        >
+          <div class="aspect-w-16 aspect-h-9">
+            <img 
+              src={item.image} 
+              alt={item.alt}
+              class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+              loading="lazy"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
